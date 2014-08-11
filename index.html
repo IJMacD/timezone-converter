@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Timezone Converter</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
+		<style>
+			.container {
+				overflow-x: auto;
+			}
+			canvas {
+				height: 400px;
+				width: 100%;
+			}
+			footer {
+				margin-bottom: 25px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>
+				Timezone Converter
+			</h1>
+			<input type="text" id="date-input" class="form-control input-lg" placeholder="Enter Time and Date" />
+			<p class="" id="date-text-tz"></p>
+			<p class="" id="date-text-local"></p>
+			<p class="" id="date-text-utc"></p>
+			<p class="" id="date-text-relative"></p>
+			<p class="" id="date-text-now"></p>
+		</div>
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/moment.min.js"></script>
+		<script src="js/moment-timezone-with-data.min.js"></script>
+		<script src="js/timezone-converter.js"></script>
+	</body>
+</html>
