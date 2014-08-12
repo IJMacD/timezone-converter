@@ -16,7 +16,9 @@
 			}
 			body {
 				background: none;
-				color: #efefef;
+			}
+			h1 {
+				color: #d5d5d5;
 			}
 			#date-input {
 				text-align: center;
@@ -24,11 +26,43 @@
 				height: auto;
 			}
 			.date-text {
-				background: rgba(0,0,0,0.5);
-				border: 3px solid rgba(0,0,0,0.5);
-				border-radius: 3px;
+				background: rgba(255,255,255,0.7);
+				border: 3px solid rgba(0,0,0,0.3);
+				border-radius: 5px;
+				color: #333;
 				font-size: 3em;
+				margin-top: 40px;
+				min-height: 66px;
+				position: relative;
 				text-align: center;
+			}
+			.date-text::before {
+				bottom: 5px;
+				color: #666;
+				content: "";
+				font-size: 14pt;
+				left: 5px;
+				position: absolute;
+			}
+			.date-text::after {
+				bottom: 5px;
+				color: #666;
+				content: attr(data-label);
+				font-size: 14pt;
+				right: 5px;
+				position: absolute;
+			}
+			#date-text-original::before {
+				content: "Original";
+			}
+			#date-text-local::before {
+				content: "Local";
+			}
+			#date-text-utc::before {
+				content: "UTC";
+			}
+			#date-text-now::before {
+				content: "Now";
 			}
 		</style>
 	</head>
@@ -37,12 +71,14 @@
 			<h1>
 				Timezone Converter
 			</h1>
-			<input type="text" id="date-input" class="form-control input-lg" placeholder="Enter Time and Date" />
-			<p class="date-text" id="date-text-tz"></p>
-			<p class="date-text" id="date-text-local"></p>
-			<p class="date-text" id="date-text-utc"></p>
+			<p>
+				<input type="text" id="date-input" class="form-control input-lg" placeholder="Enter Time and Date" />
+			</p>
+			<p class="date-text" id="date-text-original" data-label=""></p>
+			<p class="date-text" id="date-text-utc" data-label=""></p>
+			<p class="date-text" id="date-text-local" data-label=""></p>
 			<p class="date-text" id="date-text-relative"></p>
-			<p class="date-text" id="date-text-now"></p>
+			<p class="date-text" id="date-text-now" data-label=""></p>
 		</div>
 		<script src="js/jquery-2.1.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>

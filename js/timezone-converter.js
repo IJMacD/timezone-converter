@@ -1,11 +1,11 @@
 $(function(){
 	var dateInput = $('#date-input'),
-		dateTextTimeZone = $('#date-text-tz'),
+		dateTextOriginal = $('#date-text-original'),
 		dateTextLocal = $('#date-text-local'),
 		dateTextUTC = $('#date-text-utc'),
 		dateTextRelative = $('#date-text-relative'),
 		dateTextNow = $('#date-text-now'),
-		
+
 		currentDate,
 		currentDateClone;
 	
@@ -15,11 +15,11 @@ $(function(){
 	});
 		
 	setInterval(updateNowText, 500);
-	
+
 	function updateNowText(){
 		dateTextNow.text(moment().format());
 	}
-	
+
 	function updateDateText(){
 		if(!currentDate){
 			return;
