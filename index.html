@@ -7,15 +7,28 @@
 		<link rel="stylesheet" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" href="css/bootstrap-theme.min.css" />
 		<style>
-			.container {
-				overflow-x: auto;
+			html {
+				background: url(https://farm6.staticflickr.com/5547/11818274653_1f2104fb23_b.jpg) no-repeat center center fixed;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
 			}
-			canvas {
-				height: 400px;
-				width: 100%;
+			body {
+				background: none;
+				color: #efefef;
 			}
-			footer {
-				margin-bottom: 25px;
+			#date-input {
+				text-align: center;
+				font-size: 3em;
+				height: auto;
+			}
+			.date-text {
+				background: rgba(0,0,0,0.5);
+				border: 3px solid rgba(0,0,0,0.5);
+				border-radius: 3px;
+				font-size: 3em;
+				text-align: center;
 			}
 		</style>
 	</head>
@@ -25,11 +38,11 @@
 				Timezone Converter
 			</h1>
 			<input type="text" id="date-input" class="form-control input-lg" placeholder="Enter Time and Date" />
-			<p class="" id="date-text-tz"></p>
-			<p class="" id="date-text-local"></p>
-			<p class="" id="date-text-utc"></p>
-			<p class="" id="date-text-relative"></p>
-			<p class="" id="date-text-now"></p>
+			<p class="date-text" id="date-text-tz"></p>
+			<p class="date-text" id="date-text-local"></p>
+			<p class="date-text" id="date-text-utc"></p>
+			<p class="date-text" id="date-text-relative"></p>
+			<p class="date-text" id="date-text-now"></p>
 		</div>
 		<script src="js/jquery-2.1.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
